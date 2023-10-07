@@ -7,7 +7,7 @@ test.describe('Suite de testes API Gorest', async () => {
     test('GET API Request', async ({ request }) => {
         const response = await request.get('https://gorest.co.in/public/v2/users')
 
-        console.log(request)
+        console.log(response)
         console.log(response.status())
         expect(200).toEqual(response.status());
 
