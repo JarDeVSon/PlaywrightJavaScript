@@ -10,6 +10,7 @@ test.beforeEach('Before Each Hooks', async ({ page }) => {
 test.describe('Suite de testes Web - LoginPage', async () => {
 
   test('test login with successfully', async ({ page }) => {
+    console.log('test login with successfully')
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page);
     loginPage.login('tomsmith', 'SuperSecretPassword!')
@@ -26,5 +27,6 @@ test.describe('Suite de testes Web - LoginPage', async () => {
 });
 
 test.afterEach('After Each Hooks', async ({ page }) => {
+  console.log('Finish Web Testing - Login')
   await page.close();
 })
