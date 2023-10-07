@@ -55,7 +55,7 @@ And check out the following files:
   - 
 In my case, check out the following files:
   - .\tests\api_test.spec.js - API test
-  - .\tests\web_test.spec.js - Web test
+  - .\tests\web_test.spec.js - Web test using page objects model pattern (POM)
 ___
 
 Made with ❤️ by [Jardeson Santos](https://github.com/JarDeVSon). [Meu Linkedin](https://www.linkedin.com/in/jardeson-santosqa).
