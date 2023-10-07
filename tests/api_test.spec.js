@@ -7,7 +7,8 @@ test.describe('Suite de testes API Gorest', async () => {
     test('GET API Request', async ({ request }) => {
         const response = await request.get('https://gorest.co.in/public/v2/users')
 
-        console.log(response.json())
+        console.log(request)
+        console.log(response.status())
         expect(200).toEqual(response.status());
 
     });
@@ -27,9 +28,9 @@ test.describe('Suite de testes API Gorest', async () => {
 
         })
 
-        console.log(response.json())
+        console.log(response)
+        console.log(response.status())
         expect(response.status()).toBe(201)
-
         let responseBody = await response.json()
         id = responseBody.id
 
@@ -50,7 +51,8 @@ test.describe('Suite de testes API Gorest', async () => {
 
         })
 
-        console.log(response.json())
+        console.log(response)
+        console.log(response.status())
         expect(response.status()).toBe(200)
 
     });
@@ -62,7 +64,8 @@ test.describe('Suite de testes API Gorest', async () => {
                 'Content-Type': 'application/json'
             }
         })
-
+        console.log(response)
+        console.log(response.status())
         expect(response.status()).toBe(204);
 
     });
