@@ -4,6 +4,7 @@ import { DashboardPage } from '../pages/DashboardPage';
 
 test.beforeEach('Before Each Hooks', async ({ page }) => {
   await page.goto('/login');
+  console.log('Start Web Testing - Login')
 })
 
 test.describe('Suite de testes Web - LoginPage', async () => {
