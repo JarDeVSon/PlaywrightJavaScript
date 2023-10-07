@@ -52,7 +52,7 @@ And check out the following files:
   - .\tests\example.spec.js - Example end-to-end test
   - .\tests-examples\demo-todo-app.spec.js - Demo Todo App end-to-end tests
   - .\playwright.config.js - Playwright Test configuration
-  - 
+    
 In my case, check out the following files:
   - .\tests\api_test.spec.js - API test
   - .\tests\web_test.spec.js - Web test using page objects model pattern (POM)
