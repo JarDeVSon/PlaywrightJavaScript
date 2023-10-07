@@ -6,9 +6,9 @@ test.beforeEach('Before Each Hooks', async ({ page }) => {
   await page.goto('/login');
 })
 
-test.describe('Suite tests codegen', async () => {
+test.describe('Suite de testes Web - LoginPage', async () => {
 
-  test('test login codegen', async ({ page }) => {
+  test('test login with successfully', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page);
     loginPage.login('tomsmith', 'SuperSecretPassword!')
