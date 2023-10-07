@@ -4,7 +4,7 @@ let id;
 
 test.describe('Suite de testes API Gorest', async () => {
 
-    test('GET API Request', async ({ request }) => {
+    test('GET ALL API Request', async ({ request }) => {
         const response = await request.get('https://gorest.co.in/public/v2/users')
 
         console.log(response)
@@ -35,7 +35,21 @@ test.describe('Suite de testes API Gorest', async () => {
         id = responseBody.id
 
     });
+    
+    test('GET ONE SINGLE API Request', async ({ request }) => {
+        const response = await request.get('https://gorest.co.in/public/v2/users/'+id, {
+            headers: {
+                'Authorization': 'Bearer 3177007a85de886276f0ac7c6461465d4aa8269c8f1a4fae0dba09754fab28ae',
+                'Content-Type': 'application/json'
+            },
 
+        })
+
+        console.log(response)
+        console.log(response.status())
+        expect(response.status()).toBe(200)
+
+    });
     test('PUT API Request', async ({ request }) => {
         const response = await request.put('https://gorest.co.in/public/v2/users/'+id, {
             data: {
