@@ -2,12 +2,13 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage';
 
-test.beforeEach('Before Each Hooks', async ({ page }) => {
-  await page.goto('/login');
-  console.log('Start Web Testing - Login')
-})
+
 
 test.describe('Suite de testes Web - LoginPage', async () => {
+
+  test.beforeEach('Before Each Hooks', async ({ page }) => {
+    await page.goto('/login');
+  })
 
   test('test login with successfully', async ({ page }) => {
     console.log('test login with successfully')
@@ -24,9 +25,7 @@ test.describe('Suite de testes Web - LoginPage', async () => {
     await page.getByRole('link', { name: 'Logout' }).click();
   })
 
+  test.afterEach('After Each Hooks', async ({ page }) => {
+    await page.close();
+  })
 });
-
-test.afterEach('After Each Hooks', async ({ page }) => {
-  console.log('Finish Web Testing - Login')
-  await page.close();
-})
