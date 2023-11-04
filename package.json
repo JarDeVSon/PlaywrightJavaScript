@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:dev": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js",
+    "test:hom": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
