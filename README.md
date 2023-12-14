@@ -22,6 +22,9 @@ Install the Following Libraries using the command Line:
 - Add a GitHub Actions workflow to easily run tests on CI
 - Install Playwright browsers (default is true)
 
+Install system dependencies, browsers, and OS dependencies with a single command.:
+`npx playwright install --with-deps`
+
 ## Running the tests
 
 Inside that directory, you can run several commands:
