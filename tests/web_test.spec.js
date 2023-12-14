@@ -1,18 +1,16 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage';
 import { data } from '../fixtures/data.json'
-
-
+import { LoginPage } from '../pages/login-page'
 let loginPage;
 let dashboardPage;
 
 test.describe('Suite de testes Web - LoginPage', async () => {
 
   test.beforeEach('Before Each Hooks', async ({ page }) => {
-    loginPage = new LoginPage(page);
+    loginPage = new LoginPage(page)
     dashboardPage = new DashboardPage(page);
-    await page.goto('/login');
+    await loginPage.goto_login();
   })
 
   test('test login with successfully', async ({ page }) => {
