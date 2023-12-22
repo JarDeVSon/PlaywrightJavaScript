@@ -50,6 +50,13 @@ We suggest that you begin by typing:
 npx playwright test
 
 ```
+## Show Status Report
+
+To see the status report, you can run the command:
+```
+npx playwright show-report
+
+```
 
 And check out the following files:
   - .\tests\example.spec.js - Example end-to-end test
@@ -58,7 +65,13 @@ And check out the following files:
     
 In my case, check out the following files:
   - .\tests\api_test.spec.js - API test
-  - .\tests\web_test.spec.js - Web test using page objects model pattern (POM)
-___
+  - .\tests\web_test.spec.js - Web test using page objects model pattern (POM), check it out below:
+
+| Package  | Responsibility                                                          |
+|----------|-------------------------------------------------------------------------|
+| fixtures | responsible for managing test data                                      |
+| locators | responsible for identifying web elements                                |
+| pages    | responsible for page actions (navigation, (fills, types), clicks, etc.) |
+| tests    | responsible for executing the test suite                                |
 
 Made with ❤️ by [Jardeson Santos](https://github.com/JarDeVSon). [Meu Linkedin](https://www.linkedin.com/in/jardeson-santosqa).
