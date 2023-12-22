@@ -50,6 +50,13 @@ We suggest that you begin by typing:
 npx playwright test
 
 ```
+## Show Status Report
+
+To see the status report, you can run the command:
+```
+npx playwright show-report
+
+```
 
 And check out the following files:
   - .\tests\example.spec.js - Example end-to-end test
