@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { DashboardPage } from '../pages/DashboardPage';
+import { DashboardPage } from '../pages/dashboard-page';
 import { data } from '../fixtures/data.json'
 import { LoginPage } from '../pages/login-page'
 let loginPage;
