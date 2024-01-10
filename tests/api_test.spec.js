@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 let id;
-let token = '3177007a85de886276f0ac7c6461465d4aa8269c8f1a4fae0dba09754fab28ae';
+let token = '0fc3577c172bbb4ed577ddd04c71b09fe7e066549e66f24cc3decc87fd57cf21';
 
 test.describe('Suite de testes API Gorest', async () => {
 
