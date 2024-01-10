@@ -25,6 +25,26 @@ Install the Following Libraries using the command Line:
 Install system dependencies, browsers, and OS dependencies with a single command.:
 `npx playwright install --with-deps`
 
+## Project Structure: Page Object Model and Single Responsability Principle Pattern:
+
+And check out the following files:
+  - .\tests\example.spec.js - Example end-to-end test
+  - .\tests-examples\demo-todo-app.spec.js - Demo Todo App end-to-end tests
+  - .\playwright.config.js - Playwright Test configuration
+    
+In my case, check out the following files:
+  - .\tests\api_test.spec.js - API test
+  - .\tests\web_test.spec.js - Web test using page objects model pattern (POM), check it out below:
+
+
+
+| Package  | Responsibility                                                          |
+|----------|-------------------------------------------------------------------------|
+| fixtures | responsible for managing test data                                      |
+| locators | responsible for identifying web elements                                |
+| pages    | responsible for page actions (navigation, (fills, types), clicks, etc.) |
+| tests    | responsible for executing the test suite                                |
+
 ## Running the tests
 
 Inside that directory, you can run several commands:
@@ -55,23 +75,6 @@ npx playwright test
 To see the status report, you can run the command:
 ```
 npx playwright show-report
-
 ```
-
-And check out the following files:
-  - .\tests\example.spec.js - Example end-to-end test
-  - .\tests-examples\demo-todo-app.spec.js - Demo Todo App end-to-end tests
-  - .\playwright.config.js - Playwright Test configuration
-    
-In my case, check out the following files:
-  - .\tests\api_test.spec.js - API test
-  - .\tests\web_test.spec.js - Web test using page objects model pattern (POM), check it out below:
-
-| Package  | Responsibility                                                          |
-|----------|-------------------------------------------------------------------------|
-| fixtures | responsible for managing test data                                      |
-| locators | responsible for identifying web elements                                |
-| pages    | responsible for page actions (navigation, (fills, types), clicks, etc.) |
-| tests    | responsible for executing the test suite                                |
 
 Made with ❤️ by [Jardeson Santos](https://github.com/JarDeVSon). [Meu Linkedin](https://www.linkedin.com/in/jardeson-santosqa).
