@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { data_api } from '../fixtures/data_api.json'
 
 let id;
 let token = '429bab03df5e84b15e02bd22b99fb0eab12497db6eb25015d02395b89e27ff19';
@@ -16,12 +17,7 @@ test.describe('Suite de testes API Gorest', async () => {
 
     test('POST API Request', async ({ request }) => {
         const response = await request.post('https://gorest.co.in/public/v2/users', {
-            data: {
-                "name": "Repeteco11243222qwqw",
-                "email": "letsgo11214222@gmail.com",
-                "gender": "male",
-                "status": "active"
-            },
+            data: data_api,
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -53,12 +49,7 @@ test.describe('Suite de testes API Gorest', async () => {
     });
     test('PUT API Request', async ({ request }) => {
         const response = await request.put(`https://gorest.co.in/public/v2/users/${id}`, {
-            data: {
-                "name": "Repeteco1PUT1122",
-                "email": "letsgo1121222@gmail.com",
-                "gender": "male",
-                "status": "active"
-            },
+            data: data_api,
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
