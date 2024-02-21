@@ -10,10 +10,14 @@ export class LoginPage {
     async goto_login(){
         await loginLocator.base_url;
     }
-    async login(username, password) {
+
+    async username(username) {
         await loginLocator.username.fill(username)
-        await loginLocator.password.fill(password)
-        await loginLocator.login_button.click()  
     }
- 
+    async password(password){
+        await loginLocator.password.fill(password)
+    }
+    async btn_login(){
+        await loginLocator.login_button.click()
+    }
 }

@@ -1,6 +1,7 @@
 import { DashboardLocator } from "../locators/dashboard-locator"
 
 let dashboardLocator;
+
 export class DashboardPage {
     constructor(page) {
         this.page = page

@@ -15,7 +15,9 @@ test.describe('Suite de testes Web - LoginPage', async () => {
 
   test('test login with successfully', async ({ page }) => {
     console.log('test login with successfully')
-    await loginPage.login(data_web.username, data_web.password);
+    await loginPage.username(data_web.username)
+    await loginPage.password(data_web.password)
+    await loginPage.btn_login()
     await dashboardPage.headingSecureArea();
     expect(page.getByRole('heading', { name: 'Welcome to the Secure Area. When you are done click logout below.' })).toHaveText(/Welcome to the Secure Area. When you are done click logout below./);
     await page.getByRole('link', { name: 'Logout' }).click();
