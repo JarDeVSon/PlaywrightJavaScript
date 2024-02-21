@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { data_api } from '../fixtures/data_api.json'
 
 let id;
-let token = '429bab03df5e84b15e02bd22b99fb0eab12497db6eb25015d02395b89e27ff19';
+let token = '6d8e9e0e14b23014559a578911caac800b1a7eb67235cf81c04fdf1639b4d0ab';
 
 test.describe('Suite de testes API Gorest', async () => {
 
