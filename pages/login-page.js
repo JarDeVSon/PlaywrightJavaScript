@@ -10,7 +10,6 @@ export class LoginPage {
     async goto_login(){
         await loginLocator.base_url;
     }
-
     async username(username) {
         await loginLocator.username.fill(username)
     }
