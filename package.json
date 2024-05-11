@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:dev": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js",
-    "test:hom": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js"
+    "test:dev:api": "npx playwright test tests/api_servrest.spec.js",
+    "test:hom:api": "npx playwright test tests/api_servrest.spec.js",
+    "test:dev:front": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js",
+    "test:hom:front": "npx playwright test BASE_URL=https://the-internet.herokuapp.com tests/web_test.spec.js",
+    "test:ui": "npx playwright test --ui"
   },
   "keywords": [],
   "author": "",
