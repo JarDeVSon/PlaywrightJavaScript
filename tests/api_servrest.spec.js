@@ -5,15 +5,15 @@ let id;
 
 test.describe('Suite de testes API ServRest', async () => {
 
-    test.beforeEach('Before Each Hook - Storage token', async ({request}) => {
+    test.beforeEach('Before Each Hook - Storage token', async ({ request }) => {
         const response = await request.post('https://serverest.dev/login', {
             data: {
                 "email": "fulano@qa.com",
                 "password": "teste"
-              },
-              headers: {
+            },
+            headers: {
                 "Content-Type": "application/json"
-              },
+            },
         })
         console.log(response.json())
         expect(response.status()).toBe(200);
